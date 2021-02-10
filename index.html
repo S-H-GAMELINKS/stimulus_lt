@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/stimulus@2.0.0/dist/stimulus.umd.min.js"></script>
+        <script src="preview_controller.js"></script>
+    </head>
+    <body>
+        <div data-controller="preview">
+            <nav class="navbar navbar-primary bg-primary">
+                <span class="navbar-brand mb-0 h1">Stimulus Realtime Preview</span>
+            </nav>
+
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead" data-target="preview.preview"></p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </div>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">With textarea</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" data-action="keyup->preview#checkPreview" data-target="preview.input"></textarea>
+            </div>
+        </div>
+    </body>
+</html>
