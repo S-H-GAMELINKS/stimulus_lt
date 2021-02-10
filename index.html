@@ -5,22 +5,14 @@
         <script src="preview_controller.js"></script>
     </head>
     <body>
-        <div data-controller="preview">
-            <nav class="navbar navbar-primary bg-primary">
-                <span class="navbar-brand mb-0 h1">Stimulus Realtime Preview</span>
-            </nav>
+        <nav class="navbar navbar-primary bg-primary">
+            <span class="navbar-brand mb-0 h1">Stimulus Realtime Preview</span>
+        </nav>
+        <div  class="container mx-auto">
+            <div data-controller="preview" class="flex">
+                <div class="flex-1 border-2 border-black" data-target="preview.preview"></div>
 
-            <div class="jumbotron">
-                <h1 class="display-4">Hello, world!</h1>
-                <p class="lead" data-target="preview.preview"></p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </div>
-
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">With textarea</span>
-                </div>
-                <textarea class="form-control" aria-label="With textarea" data-action="keyup->preview#checkPreview" data-target="preview.input"></textarea>
+                <textarea class="flex-1 border-2 border-black" aria-label="With textarea" data-action="keyup->preview#checkPreview" data-target="preview.input"></textarea>
             </div>
         </div>
     </body>
