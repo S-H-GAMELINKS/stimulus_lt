@@ -7,7 +7,7 @@
         }
 
         checkPreview() {
-            this.previewTarget.innerHTML = this.inputTarget.value
+            this.previewTarget.innerHTML = this.inputTarget.value.replace(/\r?\n/g, '<br>')
         }
     })
 })()
